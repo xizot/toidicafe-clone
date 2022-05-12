@@ -1,0 +1,200 @@
+// ▼ ===============Flex box================== ▼
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.no-wrap {
+  flex-wrap: nowrap;
+}
+
+.items-baseline {
+  align-items: baseline;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-baseline {
+  justify-content: baseline;
+}
+
+.justify-start {
+  justify-content: start;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-evenly {
+  justify-content: space-evenly;
+}
+
+@for $i from 1 to 10 {
+  .flex-#{$i} {
+    flex: $i;
+  }
+}
+
+// ▼ ===============Block================== ▼
+.block {
+  display: block;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.fixed {
+  position: fixed;
+}
+
+@for $i from 1 through 10 {
+  .overlayer-#{$i} {
+    @include absolute-full;
+    background: rgba($color: #000000, $alpha: $i/10);
+  }
+}
+
+.btn {
+  cursor: pointer;
+  padding: spacing(1) spacing(2);
+  font-size: 1.6rem;
+  font-weight: 600;
+  background: transparent;
+  border: 1px solid transparent;
+  border-color: $mainColor;
+  color: $mainColor;
+  outline: none;
+  @include flex-center;
+  @include transition-default;
+  &:hover {
+    background: $mainColor;
+    color: #fff;
+    opacity: 0.8;
+  }
+  &-rounded {
+    border-radius: 8px;
+  }
+  &-rounded--full {
+    border-radius: 9999px;
+  }
+  &--primary {
+    background: $mainColor;
+    color: #fff;
+  }
+  &--full-width {
+    width: 100%;
+  }
+}
+
+.btn-icon {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  color: $mainColor;
+  font-size: 2.5rem;
+  outline: none;
+  border: none;
+  @include flex-center;
+  overflow: hidden;
+  i {
+    font-weight: bold;
+    border-radius: 50%;
+  }
+  &--gray {
+    background: #f0f2f5;
+  }
+}
+
+.live {
+  animation: live 2s infinite;
+}
+
+.tabPro-only {
+  display: block !important;
+  @include breakpoint(tab) {
+    display: none !important;
+  }
+}
+
+.tab-only {
+  display: none !important;
+  @include breakpoint(tab) {
+    display: block !important;
+  }
+}
+
+.sp-only {
+  display: none !important;
+  @include breakpoint(sp) {
+    display: block !important;
+  }
+}
+
+.title {
+  font-size: 2.8rem;
+  text-align: center;
+  position: relative;
+  margin-bottom: spacing(3);
+  @include breakpoint(tab) {
+    text-align: left;
+    font-size: 1.8rem;
+    margin-bottom: spacing(1);
+    padding-left: spacing(1);
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 2px;
+    width: 90px;
+    background: $mainColor;
+    @include breakpoint(tab) {
+      bottom: 0;
+      left: 0;
+      transform: translateX(0);
+      height: 100%;
+      width: 2px;
+    }
+  }
+}
+
+@keyframes live {
+  0% {
+    background-color: rgba(238, 0, 51, 0.3);
+    box-shadow: 0px 0px 0px rgba(238, 0, 51, 0.3);
+  }
+  100% {
+    background-color: transparent;
+    box-shadow: 0 0 0 10px transparent;
+  }
+}

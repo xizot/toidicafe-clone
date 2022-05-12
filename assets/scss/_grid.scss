@@ -1,0 +1,50 @@
+$col-grid: 12;
+$gutter: spacing(4);
+.row {
+  margin-left: -$gutter/2;
+  margin-right: -$gutter/2;
+  display: flex;
+  flex-wrap: wrap;
+  div[class^="col-"] {
+    padding: $gutter/2;
+    padding: $gutter/2;
+  }
+  @for $i from 1 through $col-grid {
+    .col-lg-#{$i} {
+      width: ($i / $col-grid) * 100%;
+    }
+  }
+  @for $i from 1 through $col-grid {
+    .col-md-#{$i} {
+      @include breakpoint(tabPro) {
+        width: ($i / $col-grid) * 100%;
+      }
+    }
+  }
+  @for $i from 1 through $col-grid {
+    .col-sm-#{$i} {
+      @include breakpoint(tab) {
+        width: ($i / $col-grid) * 100%;
+      }
+    }
+  }
+  @for $i from 1 through $col-grid {
+    .col-xs-#{$i} {
+      @include breakpoint(sp) {
+        width: ($i / $col-grid) * 100%;
+      }
+    }
+  }
+}
+
+@for $cusGutter from 0 through 10 {
+  .row.gutter-#{$cusGutter} {
+    $space: spacing($cusGutter);
+    margin-left: -$space/2;
+    margin-right: -$space/2;
+    div[class^="col-"] {
+      padding: $space/2;
+      padding: $space/2;
+    }
+  }
+}

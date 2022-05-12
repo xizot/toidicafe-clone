@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/scss/style.min.css" />
+    <link
+      rel="shortcut icon"
+      href="./assets/images/favicon.ico"
+      type="image/x-icon"
+    />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+
+    <title>Coffeeeee</title>
+  </head>
+  <body>
+    <header class="header">
+      <div class="flex items-center">
+        <a href="#">
+          <img class="logo" src="./assets/images/logo.svg" alt="logo" />
+        </a>
+
+        <!-- ▼ Menu for PC, TabletPro ▼ -->
+        <div class="tabPro-only flex-1">
+          <div class="flex">
+            <ul class="navigation flex items-center">
+              <li>
+                <a href="#" class="navigation__item">
+                  <i class="bx bx-hash"></i>Khuyến Mãi
+                </a>
+              </li>
+              <li>
+                <a href="#" class="navigation__item"
+                  ><i class="bx bx-purchase-tag-alt"></i> Khuyến Mãi
+                </a>
+              </li>
+            </ul>
+            <div class="navigation-right flex">
+              <button class="btn btn--primary btn-rounded--full btn-review">
+                <i class="bx bxs-pencil"></i>
+                Viết Review
+              </button>
+              <button class="btn btn-rounded-full btn-rounded--full">
+                Đăng Nhập
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ▼ Menu for Tablet, SP ▼ -->
+        <div class="tab-only flex-1">
+          <div class="navigation-right">
+            <div class="flex items-center justify-end">
+              <button class="btn-icon btn-icon--gray btn-location">
+                <i class="bx bx-current-location live"></i>
+              </button>
+              <button class="btn-icon btn-icon--gray open-menu">
+                <i class="bx bx-menu-alt-right"></i>
+              </button>
+            </div>
+          </div>
+          <div class="navigation-menu">
+            <div class="navigation-menu__content">
+              <div class="navigation-menu__blank close-menu"></div>
+              <div class="navigation-menu__right">
+                <div class="btn-login-register">
+                  <button class="btn btn-rounded btn--primary btn--full-width">
+                    Đăng nhập / Đăng ký
+                  </button>
+                </div>
+                <div class="menu-drawer">
+                  <h3 class="menu-drawer__title">Tôi đi Cafe</h3>
+                  <ul class="menu-drawer__list">
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bx-home-heart"></i>
+                        <span>Trang chủ</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bx-navigation"></i>
+                        <span>Khám phá</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bx-badge"></i>
+                        <span>Khuyến mãi</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bx-current-location"></i>
+                        <span>Địa điểm mới</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-drawer">
+                  <h3 class="menu-drawer__title">Thông tin</h3>
+                  <ul class="menu-drawer__list">
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bx-info-circle"></i>
+                        <span>Giới thiệu</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bx-check-shield"></i>
+                        <span>Điều khoản & Chính sách</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bx-envelope"></i>
+                        <span>Liên hệ - Góp ý</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bx-current-location"></i>
+                        <span>Địa điểm mới</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="menu-drawer">
+                  <h3 class="menu-drawer__title">Theo dõi tôi</h3>
+                  <ul class="menu-drawer__list">
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bxl-meta"></i>
+                        <span>Facebook</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bxl-instagram"></i>
+                        <span>Instagram</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#" class="menu-drawer__item close-menu">
+                        <i class="bx bxl-tiktok"></i>
+                        <span>Tiktok</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="navigation-bottom">
+            <div class="navigation-bottom__content">
+              <button class="navigation-bottom__btn active">
+                <i class="bx bx-home-heart"></i>
+                <p>Trang chủ</p>
+              </button>
+              <button class="navigation-bottom__btn">
+                <i class="bx bx-navigation"></i>
+                <p>Khám phá</p>
+              </button>
+              <button class="navigation-bottom__btn">
+                <i class="bx bx-badge"></i>
+                <p>Khuyến mãi</p>
+              </button>
+              <button class="navigation-bottom__btn">
+                <i class="bx bx-bookmark"></i>
+                <p>Đã lưu</p>
+              </button>
+              <button class="navigation-bottom__btn">
+                <i class="bx bx-user"></i>
+                <p>Tài khoản</p>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <section class="mainvisual">
+        <div class="overlayer-7"></div>
+        <div class="container">
+          <div class="mainvisual__content">
+            <h3 class="typing mainvisual__title"></h3>
+            <p class="mainvisual__subtitle tabPro-only">
+              Mang đến cho bạn những sự lựa chọn tốt nhất cho điểm hẹn cafe
+            </p>
+            <form action="" class="mainvisual__form">
+              <input
+                type="text"
+                placeholder="Tên quán, khu vực, kiểu quán,..."
+              />
+              <div class="tabPro-only">
+                <button
+                  type="submit"
+                  class="btn btn--primary btn-rounded btn-search"
+                >
+                  <i class="bx bx-search"></i>
+                  Tìm kiếm
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <section class="purpose">
+        <div class="container">
+          <h3 class="title">Mục đích của bạn là gì</h3>
+          <div class="row">
+            <div class="col-lg-4 col-sm-6 col-xs-12">
+              <a href="" class="purpose__item">
+                <div class="overlayer-5"></div>
+                <img
+                  src="./assets/images/purpose/selfie.jpeg"
+                  alt="chill"
+                  class="purpose__image"
+                />
+                <h3 class="purpose__title">Sống ảo</h3>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-xs-12">
+              <a href="" class="purpose__item">
+                <div class="overlayer-5"></div>
+                <img
+                  src="./assets/images/purpose/dating.jpeg"
+                  alt="chill"
+                  class="purpose__image"
+                />
+                <h3 class="purpose__title">Hẹn hò</h3>
+              </a>
+            </div>
+            <div class="col-lg-4 col-sm-6 col-xs-12">
+              <a href="" class="purpose__item">
+                <div class="overlayer-5"></div>
+                <img
+                  src="./assets/images/purpose/chill.jpeg"
+                  alt="chill"
+                  class="purpose__image"
+                />
+                <h3 class="purpose__title">Chill</h3>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+  <script>
+    const closeMenu = document.getElementsByClassName("close-menu");
+    if (closeMenu.length) {
+      for (i = 0; i < closeMenu.length; i++) {
+        closeMenu[i].addEventListener("click", function () {
+          const isOpen = document.getElementsByClassName("is-open")[0];
+          isOpen.classList.remove("is-open");
+        });
+      }
+    }
+
+    const openMenu = document.getElementsByClassName("open-menu")[0];
+    openMenu.addEventListener("click", function () {
+      document
+        .getElementsByClassName("navigation-menu")[0]
+        .classList.add("is-open");
+    });
+  </script>
+  <script src="./assets/js/index.js"></script>
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+    integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  ></script>
+  <script
+    type="text/javascript"
+    src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+  ></script>
+</html>

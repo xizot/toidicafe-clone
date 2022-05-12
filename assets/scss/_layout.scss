@@ -1,0 +1,17 @@
+.container {
+  width: 1440px;
+  max-width: 100%;
+  padding-left: 120px;
+  padding-right: 120px;
+  margin: 0 auto;
+  @include breakpoint(tabPro) {
+    width: 100%;
+    max-width: 100%;
+    padding-left: spacing(4);
+    padding-right: spacing(4);
+  }
+  @include breakpoint(tab) {
+    padding-left: spacing(2);
+    padding-right: spacing(2);
+  }
+}
