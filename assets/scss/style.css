@@ -1397,12 +1397,31 @@ section {
           justify-content: center;
 }
 
+@media only screen and (max-width: 450px) {
+  .cus-arrow__next, .cus-arrow__prev {
+    width: 32px;
+    height: 32px;
+  }
+}
+
 .cus-arrow__next {
   right: -20px;
 }
 
+@media only screen and (max-width: 450px) {
+  .cus-arrow__next {
+    right: -16px;
+  }
+}
+
 .cus-arrow__prev {
   left: -20px;
+}
+
+@media only screen and (max-width: 450px) {
+  .cus-arrow__prev {
+    left: -16px;
+  }
 }
 
 /* the slides */
