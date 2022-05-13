@@ -1,0 +1,5 @@
+body {
+    @include breakpoint(tab) {
+        padding-bottom: 64px;
+    }
+}

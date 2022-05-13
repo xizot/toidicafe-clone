@@ -1,248 +1,356 @@
+@import "./haveBottom";
 .header {
-  padding: 0 spacing(4);
-  box-shadow: 0px 2px 4px rgba($color: #000000, $alpha: 0.1);
-  @include breakpoint(tab) {
-    padding: spacing(1);
-  }
+    padding: 0 spacing(4);
+    box-shadow: 0px 2px 4px rgba($color: #000000, $alpha: 0.1);
+    @include breakpoint(tab) {
+        padding: spacing(1);
+    }
 }
 .logo {
-  height: 60px;
-  @include breakpoint(tab) {
-    height: 44px;
-  }
+    height: 60px;
+    @include breakpoint(tab) {
+        height: 44px;
+    }
 }
 .btn-review {
-  margin-right: spacing(2);
+    margin-right: spacing(2);
 }
 .btn-location {
-  margin-right: spacing(2);
+    margin-right: spacing(2);
 }
 .navigation {
-  &__item {
-    @include transition-default;
-    margin-left: spacing(4);
-    font-size: 1.8rem;
-    color: #000;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    font-weight: 600;
-    &:hover {
-      color: $mainColor;
-    }
-    i {
-      margin-right: spacing(0.5);
-      font-size: 2.5rem;
-    }
-  }
-  &-right {
-    margin-left: auto;
-  }
-  &-bottom {
-    background: #fff;
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
-    border-top: 1px solid #ddd;
-    padding: spacing(1) 0;
-    &__content {
-      max-width: 400px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    &__btn {
-      position: relative;
-      outline: none;
-      border: none;
-      flex: 1;
-      background: transparent;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      flex-direction: column;
-      &.active {
-        color: $mainColor;
-        ::after {
-          content: "";
-          position: absolute;
-          top: -10px;
-          left: 0;
-          height: 2px;
-          width: 100%;
-          background: $mainColor;
+    &__item {
+        @include transition-default;
+        margin-left: spacing(4);
+        font-size: 1.8rem;
+        color: #000;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        font-weight: 600;
+        &:hover {
+            color: $mainColor;
         }
-      }
-      i {
-        font-size: 2.8rem;
-        margin-bottom: spacing(0.5);
-      }
-      p {
-        font-size: 1rem;
-      }
+        i {
+            margin-right: spacing(0.5);
+            font-size: 2.5rem;
+        }
     }
-  }
-  &-menu {
-    position: fixed;
-    left: 0;
-    top: 0;
-    height: 100vh;
-    width: 100%;
-    background: rgba($color: #000000, $alpha: 0.7);
-    z-index: 200;
-    opacity: 0;
-    pointer-events: none;
-    &.is-open {
-      opacity: 1;
-      pointer-events: all;
+    &-right {
+        margin-left: auto;
     }
-    &.is-open &__right {
-      right: 0;
+    &-bottom {
+        background: #fff;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        z-index: 100;
+        border-top: 1px solid #ddd;
+        padding: spacing(1) 0;
+        &__content {
+            max-width: 400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &__btn {
+            position: relative;
+            outline: none;
+            border: none;
+            flex: 1;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            flex-direction: column;
+            &.active {
+                color: $mainColor;
+                ::after {
+                    content: "";
+                    position: absolute;
+                    top: -10px;
+                    left: 0;
+                    height: 2px;
+                    width: 100%;
+                    background: $mainColor;
+                }
+            }
+            i {
+                font-size: 2.8rem;
+                margin-bottom: spacing(0.5);
+            }
+            p {
+                font-size: 1rem;
+            }
+        }
     }
-    &__content {
-      display: flex;
-      height: 100%;
-      width: 100%;
-      overflow: hidden;
+    &-menu {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba($color: #000000, $alpha: 0.7);
+        z-index: 200;
+        opacity: 0;
+        pointer-events: none;
+        &.is-open {
+            opacity: 1;
+            pointer-events: all;
+        }
+        &.is-open &__right {
+            right: 0;
+        }
+        &__content {
+            display: flex;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+        }
+        &__blank {
+            flex: 1;
+        }
+        &__right {
+            position: relative;
+            background: #fff;
+            width: 280px;
+            max-width: 100%;
+            right: -100%;
+            overflow: hidden auto;
+            @include transition-default;
+            & .btn-login-register {
+                margin: spacing(2);
+            }
+        }
     }
-    &__blank {
-      flex: 1;
-    }
-    &__right {
-      position: relative;
-      background: #fff;
-      width: 280px;
-      max-width: 100%;
-      right: -100%;
-      overflow: hidden auto;
-      @include transition-default;
-      & .btn-login-register {
-        margin: spacing(2);
-      }
-    }
-  }
 }
 
 .menu-drawer {
-  &__title {
-    font-size: 1.4rem;
-    background: rgb(240, 242, 245);
-    padding: spacing(1) spacing(2);
-    font-weight: 500;
-    color: rgba($color: #000000, $alpha: 0.85);
-  }
-  &__list {
-    margin: spacing(1);
-  }
-  &__item {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    color: #333;
-    padding: spacing(1) spacing(2);
-    font-size: 1.6rem;
-    font-weight: 500;
-    i {
-      font-size: 2rem;
-      margin-right: spacing(2);
+    &__title {
+        font-size: 1.4rem;
+        background: rgb(240, 242, 245);
+        padding: spacing(1) spacing(2);
+        font-weight: 500;
+        color: rgba($color: #000000, $alpha: 0.85);
     }
-  }
+    &__list {
+        margin: spacing(1);
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        padding: spacing(1) spacing(2);
+        font-size: 1.6rem;
+        font-weight: 500;
+        i {
+            font-size: 2rem;
+            margin-right: spacing(2);
+        }
+    }
 }
 
 .mainvisual {
-  position: relative;
-  width: 100%;
-  height: 500px;
-  background: url("../images/slider-banner.webp") no-repeat center/cover;
-  @include flex-center;
-  @include breakpoint(tab) {
-    height: 180px;
-  }
-  &__content {
     position: relative;
-    z-index: 1;
     width: 100%;
-  }
-  &__title {
-    color: #fff;
-    font-size: 4rem;
-    margin-bottom: spacing(1);
-    text-align: center;
+    height: 500px;
+    background: url("../images/slider-banner.webp") no-repeat center/cover;
+    @include flex-center;
     @include breakpoint(tab) {
-      font-size: 2rem;
-      min-height: 2rem;
+        height: 180px;
     }
-  }
-  &__subtitle {
-    font-size: 1.6rem;
-    color: #ccc;
-    margin-bottom: spacing(2);
-    text-align: center;
-  }
-  &__form {
-    width: 100%;
-    display: flex;
-    input {
-      flex: 1;
-      margin-right: spacing(2);
-      padding: spacing(2);
-      border-radius: 10px;
-      outline: none;
-      border: none;
-      height: 60px;
-      color: #6d6f71;
-      font-size: 2rem;
-      @include breakpoint(tab) {
-        margin-right: 0;
-        border-radius: 9999;
-        padding: spacing(1);
+    &__content {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+    }
+    &__title {
+        color: #fff;
+        font-size: 4rem;
+        margin-bottom: spacing(1);
+        text-align: center;
+        @include breakpoint(tab) {
+            font-size: 2rem;
+            min-height: 2rem;
+        }
+    }
+    &__subtitle {
         font-size: 1.6rem;
-        height: 40px;
-      }
+        color: #ccc;
+        margin-bottom: spacing(2);
+        text-align: center;
     }
-    .btn-search {
-      height: 60px;
-      i {
-        font-size: 2rem;
-      }
+    &__form {
+        width: 100%;
+        display: flex;
+        input {
+            flex: 1;
+            margin-right: spacing(2);
+            padding: spacing(2);
+            border-radius: 10px;
+            outline: none;
+            border: none;
+            height: 60px;
+            color: #6d6f71;
+            font-size: 2rem;
+            @include breakpoint(tab) {
+                margin-right: 0;
+                border-radius: 9999;
+                padding: spacing(1);
+                font-size: 1.6rem;
+                height: 40px;
+            }
+        }
+        .btn-search {
+            height: 60px;
+            i {
+                font-size: 2rem;
+            }
+        }
     }
-  }
 }
 
 .purpose {
-  padding: spacing(8) 0;
-  &__item {
-    position: relative;
-    display: block;
-    height: 220px;
-    border-radius: 20px;
     overflow: hidden;
-    &:hover img {
-      transform: scale(1.5);
+
+    &__item {
+        position: relative;
+        display: block;
+        height: 220px;
+        border-radius: 20px;
+        overflow: hidden;
+        &:hover img {
+            transform: scale(1.5);
+        }
+        @include breakpoint(tab) {
+            height: 180px;
+        }
     }
-    @include breakpoint(tab) {
-      height: 180px;
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+        @include transition-default;
     }
-  }
-  &__image {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    position: relative;
-    z-index: -1;
-    @include transition-default;
-  }
-  &__title {
-    @include absolute-center;
-    z-index: 1;
-    color: #fff;
-    font-size: 3.2rem;
-    @include breakpoint(tab) {
-      font-size: 2.6rem;
+    &__title {
+        @include absolute-center;
+        z-index: 1;
+        color: #fff;
+        font-size: 3.2rem;
+        @include breakpoint(tab) {
+            font-size: 2.6rem;
+        }
     }
-  }
+    &__content {
+        position: relative;
+    }
+    &__slider {
+        position: relative;
+    }
+}
+
+.near-me {
+    &__content {
+        position: relative;
+    }
+    &__item {
+        position: relative;
+        display: block;
+        height: 330px;
+        border-radius: 20px;
+        overflow: hidden;
+        &:hover img {
+            transform: scale(1.5);
+        }
+        @include breakpoint(tab) {
+            height: 300px;
+        }
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        position: relative;
+        z-index: -1;
+        @include transition-default;
+    }
+    &__info {
+        position: relative;
+        z-index: 1;
+        color: #fff;
+        position: absolute;
+        left: spacing(2);
+        bottom: spacing(2);
+    }
+    &__title {
+        font-size: 2.4rem;
+        font-weight: 600;
+        margin-bottom: spacing(0.5);
+        @include breakpoint(tab) {
+            font-size: 2rem;
+        }
+    }
+    &__total {
+        font-size: 1.4rem;
+        font-weight: 400;
+    }
+}
+section {
+    margin-bottom: spacing(6);
+}
+.cus-arrow {
+    &__next,
+    &__prev {
+        position: absolute;
+        top: 50%;
+        z-index: 10;
+        background: #fff;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        transform: translateY(-50%);
+        box-shadow: 0px 2px 4px rgba($color: #000000, $alpha: 0.3);
+        font-size: 3rem;
+        @include flex-center;
+    }
+    &__next {
+        right: -20px;
+    }
+    &__prev {
+        left: -20px;
+    }
+}
+
+/* the slides */
+.slick-slide {
+    margin: 0 8px;
+}
+
+/* the parent */
+.slick-list {
+    margin: 0 -8px;
+}
+.slick-dots {
+    bottom: 0 - spacing(4);
+}
+.slick-dots li button:before {
+    font-size: 10px;
+}
+.slick-dots li {
+    margin: 0;
+}
+.slick-dots li button:before {
+    color: #777;
+}
+.slick-dots li.slick-active button:before {
+    color: $mainColor;
 }

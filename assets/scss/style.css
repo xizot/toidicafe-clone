@@ -844,6 +844,12 @@ p {
   }
 }
 
+@media only screen and (max-width: 900px) {
+  body {
+    padding-bottom: 64px;
+  }
+}
+
 .header {
   padding: 0 32px;
   -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -1146,7 +1152,7 @@ p {
 }
 
 .purpose {
-  padding: 64px 0;
+  overflow: hidden;
 }
 
 .purpose__item {
@@ -1194,4 +1200,141 @@ p {
   .purpose__title {
     font-size: 2.6rem;
   }
+}
+
+.purpose__content {
+  position: relative;
+}
+
+.purpose__slider {
+  position: relative;
+}
+
+.near-me__content {
+  position: relative;
+}
+
+.near-me__item {
+  position: relative;
+  display: block;
+  height: 330px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.near-me__item:hover img {
+  -webkit-transform: scale(1.5);
+          transform: scale(1.5);
+}
+
+@media only screen and (max-width: 900px) {
+  .near-me__item {
+    height: 300px;
+  }
+}
+
+.near-me__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  position: relative;
+  z-index: -1;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.near-me__info {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  position: absolute;
+  left: 16px;
+  bottom: 16px;
+}
+
+.near-me__title {
+  font-size: 2.4rem;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+@media only screen and (max-width: 900px) {
+  .near-me__title {
+    font-size: 2rem;
+  }
+}
+
+.near-me__total {
+  font-size: 1.4rem;
+  font-weight: 400;
+}
+
+section {
+  margin-bottom: 48px;
+}
+
+.cus-arrow__next, .cus-arrow__prev {
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  background: #fff;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 3rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.cus-arrow__next {
+  right: -20px;
+}
+
+.cus-arrow__prev {
+  left: -20px;
+}
+
+/* the slides */
+.slick-slide {
+  margin: 0 8px;
+}
+
+/* the parent */
+.slick-list {
+  margin: 0 -8px;
+}
+
+.slick-dots {
+  bottom: -32px;
+}
+
+.slick-dots li button:before {
+  font-size: 10px;
+}
+
+.slick-dots li {
+  margin: 0;
+}
+
+.slick-dots li button:before {
+  color: #777;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #e03;
 }
