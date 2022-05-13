@@ -956,6 +956,7 @@ p {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  color: #333;
 }
 
 .navigation-bottom__btn.active {

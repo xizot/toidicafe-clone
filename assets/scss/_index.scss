@@ -66,6 +66,7 @@
             justify-content: center;
             text-align: center;
             flex-direction: column;
+            color: #333;
             &.active {
                 color: $mainColor;
                 ::after {
