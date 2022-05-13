@@ -302,6 +302,86 @@
         font-weight: 400;
     }
 }
+
+.popular {
+    &__content {
+        position: relative;
+    }
+    &__item {
+        display: block;
+        border-radius: 10px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0px 2px 4px rgba($color: #000000, $alpha: 0.3);
+        text-decoration: none;
+        &:hover img {
+            transform: scale(1.5);
+        }
+    }
+    &__info {
+        padding: spacing(1.5) spacing(2);
+        color: #333;
+    }
+    &__image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        @include transition-default;
+        &__wrapper{
+            overflow: hidden;
+            
+            height: 240px;
+            @include breakpoint(tab) {
+                height: 220px;
+            } 
+        }
+       
+    }
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 600;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        margin-bottom: spacing(0.5);
+    }
+    &__address {
+        font-size: 1.4rem;
+        text-overflow: ellipsis;
+        word-break: break-word;
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical; 
+        overflow: hidden;
+    }
+}
+
+.suggest{
+    &__image{
+        width: 220px;
+        @include breakpoint(tab){
+            width: 124px;
+            margin-bottom: spacing(2);
+        }
+    }
+    &__title{
+        font-size: 2.8rem;
+        font-weight: bold;
+        margin-bottom: spacing(2);
+        text-align: center;
+        @include breakpoint(tab){
+            font-size: 1.8rem;
+        }
+    }
+    &__btn{
+        margin:  0 auto;
+    }
+}
+
 section {
     margin-bottom: spacing(6);
 }
@@ -334,14 +414,19 @@ section {
 /* the slides */
 .slick-slide {
     margin: 0 8px;
+    
 }
-
+.slick-dotted.slick-slider{
+    margin-bottom: 0;
+}
 /* the parent */
 .slick-list {
     margin: 0 -8px;
 }
 .slick-dots {
-    bottom: 0 - spacing(4);
+    position: relative;
+    bottom: 0;
+    margin-top: spacing(1.5);
 }
 .slick-dots li button:before {
     font-size: 10px;

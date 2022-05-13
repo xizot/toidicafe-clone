@@ -6,8 +6,8 @@ $gutter: spacing(4);
   display: flex;
   flex-wrap: wrap;
   div[class^="col-"] {
-    padding: $gutter/2;
-    padding: $gutter/2;
+    padding: $gutter / 2;
+    padding: $gutter / 2;
   }
   @for $i from 1 through $col-grid {
     .col-lg-#{$i} {
